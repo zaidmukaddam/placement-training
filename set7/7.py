@@ -1,4 +1,4 @@
-# lex_auth_012694465248329728100
+#lex_auth_012694465248329728100
 
 def validate_name(name):
 
@@ -19,17 +19,15 @@ def validate_phone_no(phno):
         return True
 
 
-def validate_email_id(email_id:str):
+def validate_email_id(email_id):
 
     # Start writing your code here
-    domainName = ['gmail', 'yahoo', 'hotmail']
     flag = False
 
-    for email in email_id:
-        if "gmail" in email_id or "yahoo" in email_id or "hotmail" in email_id:
-            flag = True
-        else:
-            flag = False
+    if "gmail" in email_id or "yahoo" in email_id or "hotmail" in email_id:
+        flag = True
+    else:
+        flag = False
 
     if email_id.count('@') > 1 or email_id.count('.com') > 1 or email_id[-4:] != ".com" or flag == False:
         return False
@@ -52,5 +50,5 @@ def validate_all(name, phone_no, email_id):
         pass
 
 
-# Provide different values for name, phone_no and email_id and test your program
+#Provide different values for name, phone_no and email_id and test your program
 validate_all("Tina", "9994599998", "tina@yahoo.com")
